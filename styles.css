@@ -99,6 +99,9 @@ nav.top .mark .logo-img {
   transition: height .4s, mix-blend-mode .4s;
 }
 nav.top.scrolled .mark .logo-img { height: 130px; }
+
+/* BRAND ROW (desktop only) — declarations live near end of file for cascade order */
+.brand-row { display: none; }
 nav.top .right { justify-self: end; display: flex; gap: 24px; align-items: center; }
 nav.top .inquire {
   border: 1px solid currentColor;
@@ -1055,5 +1058,69 @@ body.menu-open { overflow: hidden; }
   text-transform: none;
   font-size: 12px;
   font-family: var(--serif);
+}
+
+/* ============================================================
+   DESKTOP HEADER COMPOSITION
+   Slim nav  →  brand row (kicker + centered logo)  →  hero
+   Lives at end of file to win cascade over base .hero styles.
+   ============================================================ */
+@media (min-width: 901px) {
+  /* Nav becomes a slim horizontal bar; logo moves to brand-row */
+  nav.top { padding: 16px 36px; }
+  nav.top .mark { display: none; }
+
+  .brand-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 92px 36px 0;          /* clears the fixed nav */
+    margin: 0 auto 32px;
+    gap: 14px;
+  }
+  .brand-row .brand-kicker {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--anchor);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-row .brand-kicker::before,
+  .brand-row .brand-kicker::after {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: var(--anchor);
+    opacity: .55;
+  }
+  .brand-row .brand-logo {
+    display: block;
+    line-height: 0;
+    margin-top: 6px;
+  }
+  .brand-row .brand-logo img {
+    width: 170px;
+    height: auto;
+    display: block;
+    background: transparent;
+    mix-blend-mode: multiply;
+  }
+
+  /* Hide the in-hero kicker on desktop (it lives in brand-row now) */
+  .hero .meta-top { display: none; }
+
+  /* Hero no longer needs to clear the nav (brand-row already did) */
+  .hero {
+    padding-top: 24px;
+    padding-bottom: 80px;
+    min-height: 0;
+  }
+  .hero .img-frame { min-height: 620px; }
 }
 
