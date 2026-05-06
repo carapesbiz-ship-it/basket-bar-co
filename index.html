@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Basket Bar Co. — Custom Gift Baskets for All Occasions</title>
+<meta name="description" content="Custom gift baskets curated with quiet intention. Hand-tied for birthdays, babies, thank-yous, and every moment that matters." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<nav class="top" id="nav">
+  <div class="links">
+    <a href="#shop">Gift Ideas</a>
+    <a href="#custom">How It Works</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#" class="mark" aria-label="Basket Bar Co. — home">
+    <img src="images/logo-transparent.png" alt="Basket Bar Co." class="logo-img"/>
+  </a>
+  <div class="right">
+    <a href="#contact" class="inquire">Inquire &rarr;</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a href="#shop" class="mm-link">Gift Ideas</a>
+    <a href="#custom" class="mm-link">How It Works</a>
+    <a href="#about" class="mm-link">About</a>
+    <a href="#gallery" class="mm-link">Gallery</a>
+    <a href="#contact" class="mm-link">Contact</a>
+    <a href="#contact" class="mm-link mm-cta">Inquire &rarr;</a>
+  </div>
+</div>
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="text-col">
+    <div class="meta-top">
+      <span><span class="dot"></span>&nbsp;&nbsp;Custom Gift Baskets &middot; Made by Hand</span>
+    </div>
+    <div>
+      <h1>Thoughtful gifts<br/>that <em>linger,</em><br/>long after.</h1>
+      <p class="lede">Custom-made gift baskets &mdash; composed to order for get-wells, self-care, celebrations, holidays, and the moments that don&rsquo;t need a category. Locally curated, Canadian where possible, and hand-tied with care.</p>
+      <div class="ctas">
+        <a class="cta primary" href="#shop">View Gift Ideas &rarr;</a>
+        <a class="cta ghost" href="#contact">Request a Custom Basket</a>
+      </div>
+    </div>
+    <div class="badges">
+      <span>Hand-tied</span>
+      <span>Locally curated</span>
+      <span>Made-to-order</span>
+    </div>
+  </div>
+  <div class="img-col">
+    <div class="img-frame">
+      <div class="bg" id="heroBg"></div>
+    </div>
+    <div class="img-caption"><small>Made with care</small>Especially for you</div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="track">
+    <span>
+      Hand-tied <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.5" fill="currentColor"/></svg>
+      Locally curated <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.5" fill="currentColor"/></svg>
+      Made-to-order <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.5" fill="currentColor"/></svg>
+      One-of-a-kind <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.5" fill="currentColor"/></svg>
+      Hand-tied <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.5" fill="currentColor"/></svg>
+      Locally curated <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.5" fill="currentColor"/></svg>
+      Made-to-order <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.5" fill="currentColor"/></svg>
+      One-of-a-kind <svg width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.5" fill="currentColor"/></svg>
+    </span>
+  </div>
+</div>
+
+<!-- FEATURED -->
+<section class="featured" id="shop">
+  <div class="head">
+    <div>
+      <div class="section-label">Gift Ideas</div>
+      <h2 class="display">Featured <em>baskets.</em></h2>
+    </div>
+    <p class="lede">Real baskets crafted for real moments. Each style can be recreated or customized to fit your occasion, theme, and budget.</p>
+  </div>
+
+  <p class="featured-note">Every basket is custom-made based on the occasion, budget, theme, and product availability. The baskets shown are examples of previous creations and can be recreated or customized upon request.</p>
+
+  <div class="gallery six">
+    <a class="basket card" href="#contact" data-style="Sunshine Get Well Basket">
+      <div class="frame"><img src="images/sunshine-get-well-basket.png" alt="Sunshine Get Well Basket — yellow-themed get-well basket with tea, snacks, and lemonade" loading="lazy"/></div>
+      <div class="reveal"><span>Request This Style &rarr;</span></div>
+      <div class="meta">
+        <h3>Sunshine Get Well Basket</h3>
+        <span class="price">$60</span>
+      </div>
+      <p class="desc">A cheerful yellow-themed get-well basket with tea, snacks, lemonade, comfort treats, and a reusable basket.</p>
+      <small class="example-note">Example shown &mdash; contents may vary by season.</small>
+      <span class="card-cta">Request This Style &rarr;</span>
+    </a>
+
+    <a class="basket card" href="#contact" data-style="Pampered in Sunshine Mini-Spa Basket">
+      <div class="frame"><img src="images/pampered-sunshine-mini-spa.png" alt="Pampered in Sunshine Mini-Spa Basket — sunshine-themed self-care basket" loading="lazy"/></div>
+      <div class="reveal"><span>Request This Style &rarr;</span></div>
+      <div class="meta">
+        <h3>Pampered in Sunshine Mini-Spa</h3>
+        <span class="price">$60</span>
+      </div>
+      <p class="desc">A sunshine-inspired self-care basket with facial scrub, shower gel, face mask, bath items, sweets, and small pampering touches.</p>
+      <small class="example-note">Example shown &mdash; contents may vary by season.</small>
+      <span class="card-cta">Request This Style &rarr;</span>
+    </a>
+
+    <a class="basket card" href="#contact" data-style="The Un-Wine">
+      <div class="frame"><img src="images/un-wine-basket.png" alt="The Un-Wine basket — single bottle of Canadian wine with cheese, crackers, and chocolate" loading="lazy"/></div>
+      <div class="reveal"><span>Request This Style &rarr;</span></div>
+      <div class="meta">
+        <h3>The Un-Wine</h3>
+        <span class="price">Custom pricing</span>
+      </div>
+      <p class="desc">A single bottle of Canadian wine paired with cheese, crackers, cookies, and chocolate.</p>
+      <small class="example-note">Example shown &mdash; contents may vary by season.</small>
+      <span class="card-cta">Request This Style &rarr;</span>
+    </a>
+
+    <a class="basket card" href="#contact" data-style="The Double Un-Wine">
+      <div class="frame"><img src="images/double-un-wine-basket.png" alt="The Double Un-Wine basket — one red and one white Canadian wine with cheese and crackers" loading="lazy"/></div>
+      <div class="reveal"><span>Request This Style &rarr;</span></div>
+      <div class="meta">
+        <h3>The Double Un-Wine</h3>
+        <span class="price">Custom pricing</span>
+      </div>
+      <p class="desc">One red and one white Canadian wine label paired with cheese, crackers, cookies, and chocolate.</p>
+      <small class="example-note">Example shown &mdash; contents may vary by season.</small>
+      <span class="card-cta">Request This Style &rarr;</span>
+    </a>
+
+    <a class="basket card" href="#contact" data-style="The Beer Essentials">
+      <div class="frame"><img src="images/beer-essentials-basket.png" alt="The Beer Essentials basket — BC-brewed beer with mocktails and savory snacks" loading="lazy"/></div>
+      <div class="reveal"><span>Request This Style &rarr;</span></div>
+      <div class="meta">
+        <h3>The Beer Essentials</h3>
+        <span class="price">Custom pricing</span>
+      </div>
+      <p class="desc">A casual basket with BC-brewed beer or mocktails, salty snacks, crispy treats, and savory favourites.</p>
+      <small class="example-note">Example shown &mdash; contents may vary by season.</small>
+      <span class="card-cta">Request This Style &rarr;</span>
+    </a>
+
+    <a class="basket card" href="#contact" data-style="Holiday / Seasonal Basket">
+      <div class="frame"><img src="images/holiday-seasonal-basket.png" alt="Holiday Seasonal Basket — festive basket for staff parties and holiday gifting" loading="lazy"/></div>
+      <div class="reveal"><span>Request This Style &rarr;</span></div>
+      <div class="meta">
+        <h3>Holiday / Seasonal Basket</h3>
+        <span class="price">Custom pricing</span>
+      </div>
+      <p class="desc">Seasonal baskets created for staff parties, holiday gifting, and special celebrations.</p>
+      <small class="example-note">Example shown &mdash; contents may vary by season.</small>
+      <span class="card-cta">Request This Style &rarr;</span>
+    </a>
+  </div>
+
+  <p class="featured-callout">Many baskets are wrapped in cellophane for a finished, gift-ready look. Since the contents may not be fully visible once wrapped, each basket can include a small card listing what&rsquo;s inside.</p>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider" aria-hidden="true">
+  <span class="line"></span>
+  <svg width="60" height="32" viewBox="0 0 60 32" fill="none" stroke="currentColor" stroke-width="1">
+    <path d="M30 16 C 22 4, 8 4, 4 16 C 8 28, 22 28, 30 16 Z"/>
+    <path d="M30 16 C 38 4, 52 4, 56 16 C 52 28, 38 28, 30 16 Z"/>
+    <circle cx="30" cy="16" r="2" fill="currentColor"/>
+    <path d="M30 18 L 26 30 M30 18 L 34 30" stroke-linecap="round"/>
+  </svg>
+  <span class="line"></span>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="custom">
+  <div class="head">
+    <div class="section-label">Custom Orders</div>
+    <h2 class="display">How it <em>works.</em></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="step left">
+      <div class="img-wrap">
+        <img src="images/cozy_gift_hamper_flatlay_arrangement.png" alt="Flat-lay of gift hamper items being planned and arranged" loading="lazy"/>
+      </div>
+      <div class="num">01</div>
+      <div class="text">
+        <div class="label">Step One</div>
+        <h3>You share<br/>the <em>occasion.</em></h3>
+        <p>Tell us about the occasion, recipient, palette, and budget. Photos and notes welcome &mdash; the more we know, the better we can compose.</p>
+      </div>
+    </div>
+
+    <div class="step right">
+      <div class="text">
+        <div class="label">Step Two</div>
+        <h3>We curate<br/>the <em>basket.</em></h3>
+        <p>We compose a one-of-a-kind basket and send a photo for your review before it is finished and tied.</p>
+      </div>
+      <div class="num">02</div>
+      <div class="img-wrap">
+        <img src="images/cozy_pampering_gift_basket_arrangement.png" alt="A pampering gift basket arranged with spa products and treats" loading="lazy"/>
+      </div>
+    </div>
+
+    <div class="step left">
+      <div class="img-wrap">
+        <img src="images/cozy_gift_basket_in_a_warm_entryway.png" alt="A finished gift basket wrapped in cellophane in a warm entryway, ready for delivery" loading="lazy"/>
+      </div>
+      <div class="num">03</div>
+      <div class="text">
+        <div class="label">Step Three</div>
+        <h3>Pickup<br/>or <em>delivery.</em></h3>
+        <p>Local pickup or careful delivery arranged to your recipient &mdash; gently photographed before it goes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OCCASIONS -->
+<section class="occasions">
+  <div class="section-label">What we offer</div>
+  <h2 class="display">A basket for <em>every</em> occasion.</h2>
+  <div class="occasion-grid">
+    <a class="occasion" href="#contact"><span><span class="num">01</span>Birthday</span><span class="arrow">&rarr;</span></a>
+    <a class="occasion" href="#contact"><span><span class="num">02</span>Baby Shower</span><span class="arrow">&rarr;</span></a>
+    <a class="occasion" href="#contact"><span><span class="num">03</span>Thank You</span><span class="arrow">&rarr;</span></a>
+    <a class="occasion" href="#contact"><span><span class="num">04</span>Self-Care</span><span class="arrow">&rarr;</span></a>
+    <a class="occasion" href="#contact"><span><span class="num">05</span>Holiday</span><span class="arrow">&rarr;</span></a>
+    <a class="occasion" href="#contact"><span><span class="num">06</span>Custom</span><span class="arrow">&rarr;</span></a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="grid">
+    <div>
+      <div class="section-label">About</div>
+      <h2 class="display">Hi, I&rsquo;m <em>Sara</em> &mdash; the hands behind The Basket Bar Co.</h2>
+      <p>I started this small gifting studio because the most thoughtful gifts are never just picked from a shelf. They are composed with care, chosen with intention, and made to feel personal.</p>
+      <p>Every basket is hand-tied to order using treats sourced locally and Canadian-made favourites where possible. Whether it&rsquo;s a get-well surprise, a thank-you for a school committee, a holiday staff gift, or a corporate basket, each one is built around the person it&rsquo;s for.</p>
+      <p><em>No two baskets are ever exactly the same &mdash; and that&rsquo;s the point.</em></p>
+    </div>
+    <div class="img-pair">
+      <div class="img-wrap"><img src="images/un-wine-wrapped.png" alt="The Un-Wine basket wrapped in cellophane with a red bow" loading="lazy"/></div>
+      <div class="img-wrap"><img src="images/about-spa-tray.png" alt="Pampered in Sunshine spa basket on a tray with orange lilies" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAST CREATIONS / GALLERY -->
+<section class="mood" id="gallery">
+  <div class="head">
+    <div>
+      <div class="section-label">Past Creations</div>
+      <h2 class="display">Gift <em>gallery.</em></h2>
+    </div>
+    <p class="lede">A look at baskets we've made for past clients &mdash; sunshine get-wells, holiday wine, beer essentials, mini-spa, and seasonal one-of-a-kinds. Any of these can be recreated or customized.<br/><a href="https://instagram.com/basketbarco">@basketbarco &rarr;</a></p>
+  </div>
+  <div class="gallery-grid">
+    <a class="g-tile" href="#contact"><img src="images/un-wine-wrapped.png" alt="The Un-Wine wrapped in cellophane with a red bow" loading="lazy"/></a>
+    <a class="g-tile" href="#contact"><img src="images/holiday-seasonal-basket.png" alt="Holiday wine and snack basket" loading="lazy"/></a>
+    <a class="g-tile" href="#contact"><img src="images/gallery-spa-lilies.png" alt="Sunshine spa basket with orange lilies" loading="lazy"/></a>
+    <a class="g-tile" href="#contact"><img src="images/sunshine-get-well-basket.png" alt="Sunshine Get Well basket" loading="lazy"/></a>
+    <a class="g-tile" href="#contact"><img src="images/gallery-holiday-joy.png" alt="Holiday JOY mini basket" loading="lazy"/></a>
+    <a class="g-tile" href="#contact"><img src="images/gallery-spa-citrus.png" alt="Sunshine spa basket with citrus accents" loading="lazy"/></a>
+    <a class="g-tile" href="#contact"><img src="images/beer-essentials-basket.png" alt="The Beer Essentials basket" loading="lazy"/></a>
+    <a class="g-tile" href="#contact"><img src="images/gallery-holiday-mini.png" alt="Holiday mini cup gift" loading="lazy"/></a>
+    <a class="g-tile" href="#contact"><img src="images/double-un-wine-basket.png" alt="The Double Un-Wine basket" loading="lazy"/></a>
+  </div>
+</section>
+
+<!-- PICKUP & DELIVERY -->
+<section class="pickup-delivery">
+  <div class="pd-inner">
+    <div class="section-label">Logistics</div>
+    <h2 class="display">Pickup &amp; <em>Delivery.</em></h2>
+    <p class="pd-text">Local pickup is available by appointment. Delivery may be available depending on location and date. Please include your preferred option and delivery area when submitting your inquiry.</p>
+  </div>
+</section>
+
+<!-- INQUIRE -->
+<section class="inquire-section" id="contact">
+  <div class="head">
+    <div class="section-label">Inquire</div>
+    <h2 class="display">Let's make <em>something</em> lovely.</h2>
+  </div>
+
+  <p class="custom-note">Every basket is custom-made based on the occasion, budget, theme, and product availability. The baskets shown on this website are examples of previous creations and can be recreated or customized upon request.</p>
+
+  <p class="custom-note small-note">Many baskets are wrapped in cellophane for a finished, gift-ready look. Since the contents may not be fully visible once wrapped, each basket can include a small card listing what&rsquo;s inside.</p>
+
+  <form class="inquire-form" id="inquireForm" action="https://formspree.io/f/xojrwdpz" method="POST">
+    <div class="field">
+      <label for="f-name">Name</label>
+      <input id="f-name" name="name" type="text" required autocomplete="name"/>
+    </div>
+
+    <div class="field">
+      <label for="f-email">Email</label>
+      <input id="f-email" name="email" type="email" required autocomplete="email"/>
+    </div>
+
+    <div class="field">
+      <label for="f-phone">Phone</label>
+      <input id="f-phone" name="phone" type="tel" autocomplete="tel"/>
+    </div>
+
+    <div class="field">
+      <label for="f-style">Basket Style of Interest</label>
+      <select id="f-style" name="basket_style" required>
+        <option value="">Select a basket style&hellip;</option>
+        <option>Sunshine Get Well Basket</option>
+        <option>Pampered in Sunshine Mini-Spa Basket</option>
+        <option>The Un-Wine</option>
+        <option>The Double Un-Wine</option>
+        <option>The Beer Essentials</option>
+        <option>Holiday / Seasonal Basket</option>
+        <option>Custom Request</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="f-occasion">Occasion / Gift Type</label>
+      <select id="f-occasion" name="occasion" required>
+        <option value="">Select an occasion&hellip;</option>
+        <option>Get Well</option>
+        <option>Birthday</option>
+        <option>Self-Care</option>
+        <option>Thank You</option>
+        <option>Holiday</option>
+        <option>Celebration</option>
+        <option>Custom / Other</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="f-quantity">Number of Baskets</label>
+      <input id="f-quantity" name="quantity" type="number" min="1" step="1" placeholder="e.g. 1, 5, 12" inputmode="numeric"/>
+    </div>
+
+    <div class="field">
+      <label for="f-budget">Budget</label>
+      <select id="f-budget" name="budget">
+        <option value="">Select a budget&hellip;</option>
+        <option>Under $75</option>
+        <option>$75 &ndash; $100</option>
+        <option>$100 &ndash; $150</option>
+        <option>$150 &ndash; $200</option>
+        <option>$200+</option>
+        <option>Let&rsquo;s talk</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="f-theme">Preferred Colors or Theme</label>
+      <input id="f-theme" name="theme" type="text" placeholder="e.g. soft blush, sunshine yellow, neutral, mossy greens"/>
+    </div>
+
+    <div class="field">
+      <label for="f-allergies">Allergies or Dietary Preferences</label>
+      <input id="f-allergies" name="allergies" type="text" placeholder="e.g. nut-free, gluten-free, vegan, none"/>
+    </div>
+
+    <div class="field">
+      <label for="f-fulfillment">Pickup or Delivery</label>
+      <select id="f-fulfillment" name="fulfillment" required>
+        <option value="">Select an option&hellip;</option>
+        <option value="Local pickup">Local pickup</option>
+        <option value="Delivery">Delivery</option>
+        <option value="Not sure yet">Not sure yet</option>
+      </select>
+    </div>
+
+    <div class="field" id="city-field" hidden>
+      <label for="f-city">Delivery City / Postal Code</label>
+      <input id="f-city" name="delivery_city_postal" type="text" placeholder="e.g. Coquitlam, V3K 1A2"/>
+    </div>
+
+    <div class="field">
+      <label for="f-date">Date Needed</label>
+      <input id="f-date" name="date_needed" type="date"/>
+    </div>
+
+    <div class="field">
+      <label for="f-message">Message</label>
+      <textarea id="f-message" name="message" rows="5" placeholder="Tell us about the recipient, the moment, delivery details, and anything else we should know."></textarea>
+    </div>
+
+    <div class="form-footer">
+      <small>We respond to every inquiry within 24 hours.</small>
+      <button type="submit">Send Inquiry &rarr;</button>
+      <small class="privacy-note">Your details are only used to reply to your inquiry &mdash; never shared.</small>
+    </div>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="grid">
+    <div>
+      <img src="images/logo-transparent.png" alt="Basket Bar Co." class="footer-logo"/>
+      <p class="footer-tag">Custom gift baskets for life's sweetest moments. A small gifting studio &mdash; made by hand.</p>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#shop">Gift Ideas</a></li>
+        <li><a href="#custom">How It Works</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Find us</h4>
+      <ul>
+        <li><a href="https://instagram.com/basketbarco">@basketbarco</a></li>
+        <li><a href="mailto:basketbarco@gmail.com">basketbarco@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Pickup &amp; delivery</h4>
+      <ul>
+        <li>Serving the Lower Mainland by appointment</li>
+        <li>Local pickup welcome</li>
+      </ul>
+    </div>
+  </div>
+  <div class="legal">
+    <span>&copy; 2026 &middot; Made by hand</span>
+    <span>The Basket Bar Co.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
