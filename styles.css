@@ -383,24 +383,6 @@ section { padding: 140px 36px; position: relative; }
 }
 .basket.feature .frame { aspect-ratio: 4/5; }
 .basket.small .frame { aspect-ratio: 4/3; }
-.basket .reveal {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; transition: opacity .5s;
-  pointer-events: none;
-  z-index: 2;
-}
-.basket:hover .reveal { opacity: 1; }
-.basket .reveal span {
-  font-family: var(--serif);
-  font-style: italic;
-  font-weight: 400;
-  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
-  color: #fff;
-  font-size: clamp(24px, 3.2vw, 44px);
-  text-shadow: 0 2px 24px rgba(0,0,0,.3);
-  letter-spacing: -0.01em;
-}
 .basket .meta .price {
   font-family: var(--sans);
   font-size: 11px;
@@ -1075,7 +1057,3 @@ body.menu-open { overflow: hidden; }
   font-family: var(--serif);
 }
 
-/* Mobile: ensure the hover-only reveal stays hidden so card-cta carries the action */
-@media (pointer: coarse), (max-width: 700px) {
-  .basket .reveal { display: none; }
-}
