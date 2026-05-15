@@ -210,7 +210,15 @@ nav.top .inquire {
 }
 .hero .img-frame .bg {
   position: absolute; inset: 0;
-  background-image: url("images/hero-sunshine.png");
+  background-image: url("images/hero-sunshine.png");                    /* PNG fallback */
+  background-image: -webkit-image-set(
+    url("images/hero-sunshine.webp") type("image/webp") 1x,
+    url("images/hero-sunshine.png") type("image/png") 1x
+  );
+  background-image: image-set(
+    url("images/hero-sunshine.webp") type("image/webp") 1x,
+    url("images/hero-sunshine.png") type("image/png") 1x
+  );
   background-size: cover;
   background-position: center right;
   transform: scale(1.02);
@@ -1511,5 +1519,201 @@ body.legal-page footer .legal a { color: rgba(244,237,228,.85); }
 @media (max-width: 700px) {
   .legal-main { padding: 140px 20px 80px; }
   .legal-inner h2 { font-size: 22px; }
+}
+
+/* ============================================================
+   <picture> wrapper — make it transparent to layout
+   ============================================================ */
+picture { display: contents; }
+
+/* ============================================================
+   WHATSAPP FLOATING CHAT BUTTON
+   ============================================================ */
+.wa-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 88px; /* sits above the sticky mobile Inquire CTA */
+  z-index: 70;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 56px;
+  padding: 0 18px 0 14px;
+  border-radius: 9999px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.wa-fab:hover,
+.wa-fab:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
+  outline: 3px solid rgba(37, 211, 102, .35);
+  outline-offset: 2px;
+}
+.wa-fab-icon { width: 28px; height: 28px; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  /* On mobile, the sticky CTA bottom: 16; we sit above it (49+16+gap). */
+  .wa-fab { bottom: 88px; }
+}
+@media (max-width: 640px) {
+  .wa-fab { padding: 0; width: 56px; justify-content: center; bottom: 88px; right: 16px; }
+  .wa-fab-label { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wa-fab { transition: none; }
+  .wa-fab:hover { transform: none; }
+}
+
+/* ============================================================
+   "WHAT EVERY BASKET COMES WITH" — promises
+   ============================================================ */
+.promises {
+  background: var(--paper);
+  padding: 120px 36px 120px;
+}
+.promises-head {
+  max-width: 900px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+.promises-head .section-label { justify-content: center; }
+.promises-head .section-label::before { display: none; }
+.promises-head h2 { font-size: clamp(40px, 5.5vw, 76px); }
+.promises-sub {
+  margin-top: 16px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--mute);
+}
+.promises-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.promise-card {
+  background: var(--cream);
+  border: 1px solid var(--hair);
+  border-radius: 4px;
+  padding: 36px 28px;
+  transition: transform .35s, box-shadow .35s;
+}
+.promise-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(58, 37, 48, .10);
+}
+.promise-card .promise-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 30px;
+  color: var(--anchor);
+  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+.promise-card h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.promise-card p {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+}
+@media (max-width: 1000px) {
+  .promises-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .promises { padding: 80px 20px 80px; }
+  .promise-card { padding: 28px 22px; }
+}
+
+/* ============================================================
+   OCCASION TILE DESCRIPTIONS (one-liners)
+   ============================================================ */
+.occasion {
+  flex-direction: column;
+  align-items: stretch;
+}
+.occasion .occ-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+.occasion .occ-desc {
+  margin: 12px 0 0;
+  font-family: var(--serif);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--mute);
+  letter-spacing: 0;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  max-width: 44ch;
+}
+.occasion:hover .occ-desc { color: var(--blush); }
+
+/* ============================================================
+   GALLERY CAPTIONS (Style · Vibe)
+   ============================================================ */
+.gallery-grid .g-tile {
+  display: flex;
+  flex-direction: column;
+}
+.gallery-grid .g-tile picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.gallery-grid .g-tile .g-caption {
+  display: block;
+  padding: 10px 4px 0;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--mute);
+  text-decoration: none;
+}
+/* The aspect-ratio rule on .g-tile needs adjusting so caption doesn't break it */
+.gallery-grid .g-tile {
+  aspect-ratio: auto;
+  background: transparent;
+}
+.gallery-grid .g-tile picture {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--cream-2);
+  border-radius: 2px;
+}
+.gallery-grid .g-tile.wide picture {
+  aspect-ratio: 4 / 3;
+}
+.gallery-grid .g-tile picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
