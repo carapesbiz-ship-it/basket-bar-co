@@ -130,3 +130,31 @@
   sync();
 })();
 
+// QUICK INQUIRY FORM — AJAX submit to Formspree + inline confirmation
+(function () {
+  const form = document.getElementById('quickForm');
+  if (!form) return;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type=submit]');
+    const originalText = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.innerHTML = '<p class="quick-success" style="text-align:center; padding:24px 0; font-family: var(--serif); font-size:18px; line-height:1.5; color: var(--ink-soft);">✿ Thank you — your note is in. We&rsquo;ll reply within 24 hours.</p>';
+      } else {
+        throw new Error('Formspree returned ' + res.status);
+      }
+    } catch (err) {
+      if (btn) { btn.disabled = false; btn.textContent = originalText; }
+      alert('Sorry — something went wrong sending your note. Please email basketbarco@gmail.com directly.');
+    }
+  });
+})();
+
