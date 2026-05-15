@@ -634,11 +634,18 @@ section { padding: 140px 36px; position: relative; }
   transition: transform 1.2s cubic-bezier(.2,.8,.2,1), filter .8s;
 }
 .gallery-grid .g-tile:hover img { transform: scale(1.04); filter: brightness(.92); }
+/* Wide tile: spans 2 columns, landscape aspect, used for editorial flat-lay shots */
+.gallery-grid .g-tile.wide {
+  grid-column: span 2;
+  aspect-ratio: 4 / 3;
+}
 @media (max-width: 1100px) {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .gallery-grid .g-tile.wide { grid-column: span 2; aspect-ratio: 4 / 3; }
 }
 @media (max-width: 600px) {
   .gallery-grid { grid-template-columns: 1fr; gap: 12px; }
+  .gallery-grid .g-tile.wide { grid-column: span 1; aspect-ratio: 4 / 3; }
 }
 
 /* PICKUP & DELIVERY */
@@ -991,6 +998,9 @@ body.menu-open { overflow: hidden; }
 }
 .gallery.six .basket.card .frame { aspect-ratio: 4/5; }
 .gallery.six .basket.card { display: flex; flex-direction: column; }
+@media (max-width: 600px) {
+  .gallery.six { grid-template-columns: 1fr; }
+}
 
 /* Visible per-card CTA (always shown; complements hover overlay on desktop) */
 .basket .card-cta {
