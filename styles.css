@@ -1181,6 +1181,21 @@ body.menu-open { overflow: hidden; }
   text-transform: uppercase;
   color: var(--anchor);
   padding-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.pickup-delivery .pd-item .pd-badge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #2f8a4a;
+  padding: 3px 10px;
+  border-radius: 999px;
+  display: inline-block;
 }
 .pickup-delivery .pd-item dd {
   font-family: var(--serif);
@@ -1291,6 +1306,11 @@ body.menu-open { overflow: hidden; }
   border: 1px solid var(--hair);
   padding: 9px 16px;
   border-radius: 999px;
+}
+.trust-chips li.chip-highlight {
+  background: #2f8a4a;
+  border-color: #2f8a4a;
+  color: #fff;
 }
 .honest-proof {
   max-width: 760px;
