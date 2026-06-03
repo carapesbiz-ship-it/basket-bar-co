@@ -886,9 +886,39 @@ footer .legal {
   .inquire-form { padding: 32px 24px 28px; }
   .custom-note { padding: 16px 20px; }
   section, .how, .occasions, .about, .mood, .inquire-section { padding-left: 20px; padding-right: 20px; }
-  .hero { grid-template-columns: 1fr; padding: 120px 20px 40px; gap: 32px; }
-  .hero .img-frame { min-height: 480px; }
-  .hero .img-caption { left: 0; bottom: 24px; }
+  /* Mobile hero — full-bleed editorial: image first, text below */
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 90px 0 56px;        /* zero side padding so image can full-bleed */
+    gap: 28px;
+    min-height: 0;
+  }
+  .hero .img-col { order: -1; }   /* image renders FIRST */
+  .hero .text-col { padding: 0 22px; }
+  .hero .img-frame {
+    min-height: 420px;
+    border-radius: 0;             /* edge-to-edge */
+    box-shadow: none;
+  }
+  .hero .img-frame .bg {
+    background-position: center 42%;
+  }
+  .hero .vol-tag,
+  .hero .img-caption {
+    left: 16px;
+    bottom: 18px;
+    right: auto;
+  }
+  .hero .img-caption {
+    padding: 13px 18px;
+    font-size: 15px;
+    transform: rotate(-2deg);
+  }
+  /* Tighter hero text rhythm so the headline lands close to the image */
+  .hero h1 { margin-top: 16px; }
+  .hero .lede { margin-top: 22px; font-size: 17px; }
+  .hero .ctas { margin-top: 26px; }
+  .hero .hero-micro { margin-top: 18px; }
   .featured .head, .mood .head, .about .grid { grid-template-columns: 1fr; }
   .featured .lede { justify-self: start; }
   .gallery { grid-template-columns: 1fr; }
